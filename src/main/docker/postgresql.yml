@@ -1,0 +1,11 @@
+version: '2'
+services:
+    highcliff-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/highcliff/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=highcliff
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
