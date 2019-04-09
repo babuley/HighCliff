@@ -1,0 +1,59 @@
+{
+    "name": "Observation",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "ObservationStatus",
+            "fieldValues": "Recorded,Invalid,Removed,NotRecorded,RecordedInError"
+        },
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "floatValue",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "booleanValue",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "intValue",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "stringValue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordedWhen",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "parameter",
+            "otherEntityRelationshipName": "observation",
+            "relationshipName": "parameter",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "record",
+            "otherEntityRelationshipName": "observation",
+            "relationshipName": "record",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190318234452",
+    "entityTableName": "observation",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

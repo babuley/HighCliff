@@ -40,6 +40,10 @@ public class CacheConfiguration {
             cm.createCache(com.highcliff.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.highcliff.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.highcliff.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.highcliff.domain.Parameter.class.getName(), jcacheConfiguration);
+            cm.createCache(com.highcliff.domain.Record.class.getName(), jcacheConfiguration);
+            cm.createCache(com.highcliff.domain.Record.class.getName() + ".recordIds", jcacheConfiguration);
+            cm.createCache(com.highcliff.domain.Observation.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="highcliffApp.parameter.home.title">Parameters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-parameter" [routerLink]="['/parameter/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="highcliffApp.parameter.home.createLabel">
+            Create new Parameter
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="parameters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="highcliffApp.parameter.min">Min</span></th>
+            <th><span jhiTranslate="highcliffApp.parameter.max">Max</span></th>
+            <th><span jhiTranslate="highcliffApp.parameter.displayPrecision">Display Precision</span></th>
+            <th><span jhiTranslate="highcliffApp.parameter.unit">Unit</span></th>
+            <th><span jhiTranslate="highcliffApp.parameter.parameterName">Parameter Name</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let parameter of parameters ;trackBy: trackId">
+                <td><a [routerLink]="['/parameter', parameter.id, 'view' ]">{{parameter.id}}</a></td>
+                <td>{{parameter.min}}</td>
+                <td>{{parameter.max}}</td>
+                <td>{{parameter.displayPrecision}}</td>
+                <td jhiTranslate="{{'highcliffApp.Unit.' + parameter.unit}}">{{parameter.unit}}</td>
+                <td>{{parameter.parameterName}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/parameter', parameter.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/parameter', parameter.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'parameter', { outlets: { popup: parameter.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+{
+    "name": "Parameter",
+    "fields": [
+        {
+            "fieldName": "min",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "max",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "displayPrecision",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "unit",
+            "fieldType": "Unit",
+            "fieldValues": "Kg,MM,Percent,MMHg,Centigrade,KPa,YesNo,Litres,Text,BPM,RPM"
+        },
+        {
+            "fieldName": "parameterName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190318234453",
+    "entityTableName": "parameter",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

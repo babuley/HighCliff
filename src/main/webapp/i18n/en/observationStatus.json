@@ -1,0 +1,12 @@
+{
+    "highcliffApp": {
+        "ObservationStatus": {
+            "null": "",
+            "Recorded": "Recorded",
+            "Invalid": "Invalid",
+            "Removed": "Removed",
+            "NotRecorded": "NotRecorded",
+            "RecordedInError": "RecordedInError"
+        }
+    }
+}

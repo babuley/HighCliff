@@ -1,0 +1,29 @@
+{
+    "highcliffApp": {
+        "observation": {
+            "home": {
+                "title": "Observations",
+                "createLabel": "Create a new Observation",
+                "createOrEditLabel": "Create or edit a Observation"
+            },
+            "created": "A new Observation is created with identifier {{ param }}",
+            "updated": "A Observation is updated with identifier {{ param }}",
+            "deleted": "A Observation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Observation {{ id }}?"
+            },
+            "detail": {
+                "title": "Observation"
+            },
+            "status": "Status",
+            "comment": "Comment",
+            "floatValue": "Float Value",
+            "booleanValue": "Boolean Value",
+            "intValue": "Int Value",
+            "stringValue": "String Value",
+            "recordedWhen": "Recorded When",
+            "parameter": "Parameter",
+            "record": "Record"
+        }
+    }
+}

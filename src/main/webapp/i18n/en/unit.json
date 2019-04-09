@@ -1,0 +1,18 @@
+{
+    "highcliffApp": {
+        "Unit": {
+            "null": "",
+            "Kg": "Kg",
+            "MM": "MM",
+            "Percent": "Percent",
+            "MMHg": "MMHg",
+            "Centigrade": "Centigrade",
+            "KPa": "KPa",
+            "YesNo": "YesNo",
+            "Litres": "Litres",
+            "Text": "Text",
+            "BPM": "BPM",
+            "RPM": "RPM"
+        }
+    }
+}

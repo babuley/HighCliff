@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="observation">
+            <h2><span jhiTranslate="highcliffApp.observation.detail.title">Observation</span> {{observation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="highcliffApp.observation.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'highcliffApp.ObservationStatus.' + observation.status}}">{{observation.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.comment">Comment</span></dt>
+                <dd>
+                    <span>{{observation.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.floatValue">Float Value</span></dt>
+                <dd>
+                    <span>{{observation.floatValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.booleanValue">Boolean Value</span></dt>
+                <dd>
+                    <span>{{observation.booleanValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.intValue">Int Value</span></dt>
+                <dd>
+                    <span>{{observation.intValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.stringValue">String Value</span></dt>
+                <dd>
+                    <span>{{observation.stringValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.recordedWhen">Recorded When</span></dt>
+                <dd>
+                    <span>{{observation.recordedWhen}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.parameter">Parameter</span></dt>
+                <dd>
+                    <div *ngIf="observation.parameter">
+                        <a [routerLink]="['/parameter', observation.parameter?.id, 'view']">{{observation.parameter?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.observation.record">Record</span></dt>
+                <dd>
+                    <div *ngIf="observation.record">
+                        <a [routerLink]="['/record', observation.record?.id, 'view']">{{observation.record?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/observation', observation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

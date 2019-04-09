@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-parameter-heading" jhiTranslate="highcliffApp.parameter.home.createOrEditLabel">Create or edit a Parameter</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!parameter.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="parameter.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="highcliffApp.parameter.min" for="field_min">Min</label>
+                    <input type="number" class="form-control" name="min" id="field_min"
+                        [(ngModel)]="parameter.min" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="highcliffApp.parameter.max" for="field_max">Max</label>
+                    <input type="number" class="form-control" name="max" id="field_max"
+                        [(ngModel)]="parameter.max" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="highcliffApp.parameter.displayPrecision" for="field_displayPrecision">Display Precision</label>
+                    <input type="number" class="form-control" name="displayPrecision" id="field_displayPrecision"
+                        [(ngModel)]="parameter.displayPrecision" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="highcliffApp.parameter.unit" for="field_unit">Unit</label>
+                    <select class="form-control" name="unit" [(ngModel)]="parameter.unit" id="field_unit" >
+                        <option value="Kg">{{'highcliffApp.Unit.Kg' | translate}}</option>
+                        <option value="MM">{{'highcliffApp.Unit.MM' | translate}}</option>
+                        <option value="Percent">{{'highcliffApp.Unit.Percent' | translate}}</option>
+                        <option value="MMHg">{{'highcliffApp.Unit.MMHg' | translate}}</option>
+                        <option value="Centigrade">{{'highcliffApp.Unit.Centigrade' | translate}}</option>
+                        <option value="KPa">{{'highcliffApp.Unit.KPa' | translate}}</option>
+                        <option value="YesNo">{{'highcliffApp.Unit.YesNo' | translate}}</option>
+                        <option value="Litres">{{'highcliffApp.Unit.Litres' | translate}}</option>
+                        <option value="Text">{{'highcliffApp.Unit.Text' | translate}}</option>
+                        <option value="BPM">{{'highcliffApp.Unit.BPM' | translate}}</option>
+                        <option value="RPM">{{'highcliffApp.Unit.RPM' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="highcliffApp.parameter.parameterName" for="field_parameterName">Parameter Name</label>
+                    <input type="text" class="form-control" name="parameterName" id="field_parameterName"
+                        [(ngModel)]="parameter.parameterName" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+    "name": "Record",
+    "fields": [
+        {
+            "fieldName": "recordId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "record",
+            "relationshipName": "userId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190318234454",
+    "entityTableName": "record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

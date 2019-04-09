@@ -1,0 +1,60 @@
+entity Observation {
+	name String,
+    whenRecorded Date,
+    comment String
+}
+
+enum Unit {
+	Kg,
+    MM,
+    Percent,
+    MMHg,
+    Centigrade,
+    KPa,
+    YesNo,
+    Litres,
+    Text,
+    BPM,
+    RPM
+}
+
+entity Parameter {    
+	min Double,
+    max Double,
+    displayPrecision Integer,
+    unit Unit,
+    parameterName String
+}
+
+enum ObservationStatus {
+	Recorded,
+    Invalid,
+    Removed, 
+    NotRecorded,
+    RecordedInError
+}
+
+entity Record {
+   recordId Long
+}
+
+entity Observation {
+   status ObservationStatus,
+   comment String,
+   floatValue Double, 
+   booleanValue Boolean,
+   intValue Integer,
+   stringValue String,
+   recordedWhen Instant
+}
+
+relationship ManyToOne {
+	Observation{parameter} to Parameter
+}
+relationship ManyToOne {
+	Observation{record} to Record
+}
+
+relationship ManyToOne {
+	Record{userId} to User
+}

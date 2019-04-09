@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Observation.
+    -->
+    <changeSet id="20190318234452-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="parameter_id"
+                                 baseTableName="observation"
+                                 constraintName="fk_observation_parameter_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parameter"/>
+
+        <addForeignKeyConstraint baseColumnNames="record_id"
+                                 baseTableName="observation"
+                                 constraintName="fk_observation_record_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="record"/>
+
+    </changeSet>
+</databaseChangeLog>

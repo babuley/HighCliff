@@ -1,38 +1,42 @@
 {
-    "generator-jhipster": {
-        "promptValues": {
-            "packageName": "com.highcliff",
-            "nativeLanguage": "en"
-        },
-        "jhipsterVersion": "5.8.2",
-        "applicationType": "monolith",
-        "baseName": "highcliff",
-        "packageName": "com.highcliff",
-        "packageFolder": "com/highcliff",
-        "serverPort": "8080",
-        "authenticationType": "session",
-        "cacheProvider": "ehcache",
-        "enableHibernateCache": true,
-        "websocket": "spring-websocket",
-        "databaseType": "sql",
-        "devDatabaseType": "h2Disk",
-        "prodDatabaseType": "postgresql",
-        "searchEngine": false,
-        "messageBroker": false,
-        "serviceDiscoveryType": false,
-        "buildTool": "maven",
-        "enableSwaggerCodegen": false,
-        "rememberMeKey": "f8596cee76da4eb54e51bf77e36e5290fb5ef0b467889d0c21f47daf0b082bacb162036c0898a52f38b2807f4da8ca43d46d",
-        "clientFramework": "angularX",
-        "useSass": true,
-        "clientPackageManager": "npm",
-        "testFrameworks": ["protractor"],
-        "jhiPrefix": "jhi",
-        "entitySuffix": "",
-        "dtoSuffix": "DTO",
-        "otherModules": [],
-        "enableTranslation": true,
-        "nativeLanguage": "en",
-        "languages": ["en"]
-    }
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.highcliff",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "highcliff",
+    "packageName": "com.highcliff",
+    "packageFolder": "com/highcliff",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "rememberMeKey": "f8596cee76da4eb54e51bf77e36e5290fb5ef0b467889d0c21f47daf0b082bacb162036c0898a52f38b2807f4da8ca43d46d",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ]
+  }
 }

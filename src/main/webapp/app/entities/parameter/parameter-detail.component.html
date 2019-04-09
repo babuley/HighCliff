@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="parameter">
+            <h2><span jhiTranslate="highcliffApp.parameter.detail.title">Parameter</span> {{parameter.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="highcliffApp.parameter.min">Min</span></dt>
+                <dd>
+                    <span>{{parameter.min}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.parameter.max">Max</span></dt>
+                <dd>
+                    <span>{{parameter.max}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.parameter.displayPrecision">Display Precision</span></dt>
+                <dd>
+                    <span>{{parameter.displayPrecision}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.parameter.unit">Unit</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'highcliffApp.Unit.' + parameter.unit}}">{{parameter.unit}}</span>
+                </dd>
+                <dt><span jhiTranslate="highcliffApp.parameter.parameterName">Parameter Name</span></dt>
+                <dd>
+                    <span>{{parameter.parameterName}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/parameter', parameter.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
